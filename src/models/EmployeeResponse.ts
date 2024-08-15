@@ -1,5 +1,5 @@
 export type EmployeeResponse =  {
-    employeeId: Number,
+    id: Number,
     name: String,
     salary: Number,
     bankAccountNumber: Number,

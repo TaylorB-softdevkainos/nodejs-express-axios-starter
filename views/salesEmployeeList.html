@@ -10,10 +10,10 @@
                 <th>Employee ID</th>
                 <th>Employee Name</th>
             </tr>
-            {% for employee in salesEmployee | sort(attribute='employeId') %}
+            {% for employee in salesEmployee | sort(attribute='id') %}
                 <tr>
-                    <td><a href="/employees/sales/{{employee.employeeId}}" target="_blank">{{ employee.employeeId }}</a></td>
-                    <td>{{ employee.name | name }}</td>
+                    <td><a href="/employees/sales/{{employee.employeeId}}" target="_blank">{{ employee.id }}</a></td>
+                    <td>{{ employee.name}}</td>
                 </tr>
             {% endfor %}
         </table>
