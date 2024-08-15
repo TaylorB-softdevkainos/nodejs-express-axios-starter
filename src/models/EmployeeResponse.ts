@@ -1,8 +1,8 @@
 export type EmployeeResponse =  {
-    id: Number,
-    name: String,
-    salary: Number,
-    bankAccountNumber: Number,
-    nin: String,
-    comission: Number
+    id: number,
+    name: string,
+    salary: number,
+    bankAccountNumber: number,
+    nin: string,
+    comission: number
 }
