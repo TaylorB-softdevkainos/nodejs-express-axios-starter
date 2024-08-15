@@ -9,11 +9,17 @@
             <tr>
                 <th>Employee ID</th>
                 <th>Employee Name</th>
+                <th>Employee Salary</th>
+                <th>Employee Bank No</th>
+                <th>Employee nin</th>
             </tr>
             {% for employee in salesEmployee | sort(attribute='id') %}
                 <tr>
                     <td>{{ employee.id }}</td>
                     <td>{{ employee.name}}</td>
+                    <td>{{ employee.salary}}</td>
+                    <td>{{ employee.bankAccountNumber}}</td>
+                    <td>{{ employee.nin}}</td>
                 </tr>
             {% endfor %}
         </table>
