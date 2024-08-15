@@ -11,11 +11,11 @@
                 <th>Sales Employee ID</th>
                 <th>Project ID</th>
             </tr>
-            {% for client in clients | sort(attribute='clientId') %}
+            {% for client in clients | sort(attribute='id') %}
                 <tr>
-                    <td>{{ client.clientId }}</td>
+                    <td>{{ client.id }}</td>
                     <td>{{ client.salesEmpId }}</td>
-                    <td>{{ client.projectId }}</td>
+                    <td>{{ client.projectRequest.projectId }}</td>
                 </tr>
             {% endfor %}
         </table>

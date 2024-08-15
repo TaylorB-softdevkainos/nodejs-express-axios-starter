@@ -1,5 +1,7 @@
+import { ProjectRequest } from "./ProjectRequest"
+
 export type Client = {
-    clientId: Number,
-    salesEmpId: Number,
-    projectId: Number
+    id: number,
+    salesEmpId: number,
+    projectRequest: ProjectRequest
 }
