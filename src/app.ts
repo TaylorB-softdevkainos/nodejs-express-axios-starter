@@ -37,4 +37,4 @@ app.listen(3000, () => {
 app.get('/clients', getAllClients);
 app.get('/', getAllDatabases);
 app.get('/employee/sales', getAllSaleEmployee);
-app.get('/employee/delivery', getAllDeliveryEmployee);
+app.get('/employee/delivery', getAllDeliveryEmployee)
