@@ -12,7 +12,7 @@
             </tr>
             {% for employee in deliveryEmployee | sort(attribute='id') %}
                 <tr>
-                    <td><a href="/employees/delivery/{{employee.employeeId}}" target="_blank">{{ employee.id }}</a></td>
+                    <td>{{ employee.id }}</td>
                     <td>{{ employee.name}}</td>
                 </tr>
             {% endfor %}
