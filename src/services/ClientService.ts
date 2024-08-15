@@ -1,9 +1,10 @@
 import axios, {AxiosResponse} from "axios";
 import { Client } from "../models/Client";
+import { getHeader } from "./AuthUtil";
 
-export const getClients = async (): Promise<Client[]> => {
+export const getClients = async (token: string): Promise<Client[]> => {
     try {
-        const response: AxiosResponse = await axios.get("http://localhost:8080/api/clients");
+        const response: AxiosResponse = await axios.get("http://localhost:8080/api/clients", getHeader(token));
 
         return response.data;
     } catch (e) {
