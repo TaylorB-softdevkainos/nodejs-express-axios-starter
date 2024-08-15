@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Client List</title>
+    </head>
+    <body>
+        <h1>Clients</h1>
+        <table>
+            <tr>
+                <th>Client ID</th>
+                <th>Sales Employee ID</th>
+                <th>Project ID</th>
+            </tr>
+            {% for client in clients | sort(attribute='id') %}
+                <tr>
+                    <td>{{ client.id }}</td>
+                    <td>{{ client.salesEmpId }}</td>
+                    <td>{{ client.projectRequest.projectId }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
