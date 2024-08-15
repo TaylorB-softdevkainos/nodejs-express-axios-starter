@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 import session from "express-session";
 import { getAllClients } from "./controllers/ClientController";
 import { dateFilter } from "./filters/DateFilter";
+import { getAllDatabases } from "./controllers/TestController";
+import { getAllDeliveryEmployee, getAllSaleEmployee } from "./controllers/EmployeeController";
 
 
 const app = express();
@@ -33,3 +35,6 @@ app.listen(3000, () => {
 });
 
 app.get('/clients', getAllClients);
+app.get('/', getAllDatabases);
+app.get('/employee/sales', getAllSaleEmployee);
+app.get('/employee/delivery', getAllDeliveryEmployee)

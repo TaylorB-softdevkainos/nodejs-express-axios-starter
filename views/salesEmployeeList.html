@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sales Employee</title>
+    </head>
+    <body>
+        <h1>Employee</h1>
+        <table>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+            </tr>
+            {% for employee in salesEmployee | sort(attribute='id') %}
+                <tr>
+                    <td>{{ employee.id }}</td>
+                    <td>{{ employee.name}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
